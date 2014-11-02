@@ -8,7 +8,7 @@ module Calc
       when "*" then a * b
       when "/" then a / b
       end
-  	else
+  	elsif string =~/\A\d+\z/
   		string.to_i
   	end
   end
