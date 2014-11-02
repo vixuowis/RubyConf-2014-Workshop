@@ -84,11 +84,25 @@ describe 'calc' do
     end
 
     it 'should eval 3*2-4/2 to 2' do
-      expect(Calc.eval('3*2-4/2')).to eq 2
+      expect(Calc.eval('3*2-4/2')).to eq 4
     end
 
     it 'should eval 8-6-8/3 to 0' do
       expect(Calc.eval('8-6-8/3')).to eq 0
+    end
+  end
+
+  context 'with blanket' do
+    it 'should eval 1+3*2 to 7' do
+      expect(Calc.eval('(1+3)*2')).to eq 8
+    end
+
+    it 'should eval 3*2-4/2 to 2' do
+      expect(Calc.eval('(3*2-4)/2')).to eq 1
+    end
+
+    it 'should eval 8-6-8/3 to 0' do
+      expect(Calc.eval('(8-7)+(6-8)/3')).to eq 1
     end
   end
 end
