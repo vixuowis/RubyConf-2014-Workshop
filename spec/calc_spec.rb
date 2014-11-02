@@ -23,4 +23,21 @@ describe 'calc' do
   it 'should eval 3-1 to 2' do
     expect(Calc.eval('3-1')).to eq 2
   end
+
+  it 'should eval 1-1 to 0' do
+    expect(Calc.eval('1-1')).to eq 0
+  end 
+
+  it 'should eval 2*1 to 2' do
+    expect(Calc.eval('2*1')).to eq 2
+  end
+
+  it 'should eval 4/2 to 2' do
+    expect(Calc.eval('4/2')).to eq 2
+  end
+
+    # integer division
+  it 'should eval 4/3 to 1' do
+    expect(Calc.eval('4/3')).to eq 1
+  end
 end
