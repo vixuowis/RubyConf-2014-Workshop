@@ -4,7 +4,8 @@ module Calc
       a,op,b = $1.to_i, $2, $3.to_i
       case op
       when "+" then a + b
-      when "-" then a - b
+      when "-" then (a - b) < 0 ? 0 : a - b
+
       when "*" then a * b
       when "/" then a / b
       end

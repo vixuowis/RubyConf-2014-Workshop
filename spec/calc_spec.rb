@@ -45,4 +45,5 @@ describe 'calc' do
     it 'should eval 3-5 to 0' do
       expect(Calc.eval('3-5')).to eq 0
     end
+  end
 end
