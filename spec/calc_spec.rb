@@ -46,4 +46,21 @@ describe 'calc' do
       expect(Calc.eval('3-5')).to eq 0
     end
   end
+
+  context 'multiple same calcs' do
+    it 'should eval 1+1+1 to 3' do
+      expect(Calc.eval('1+1+1')).to eq 3
+    end
+
+    it 'should eval 3*2*4*2 to 48' do
+      expect(Calc.eval('3*2*4*2')).to eq 48
+    end
+
+    it 'should eval 5-2-1 to 2' do
+      expect(Calc.eval('5-2-1')).to eq 2
+    end
+    it 'should eval 5-2-8-1 to 0' do
+      expect(Calc.eval('5-2-8-1')).to eq 0
+    end
+  end
 end
