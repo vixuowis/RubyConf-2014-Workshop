@@ -15,8 +15,12 @@ describe 'calc' do
   end
 
 
-  # Basic calculation
+  # Basic calculations
   it 'should eval 1+2 to 3' do
     expect(Calc.eval('1+2')).to eq 3
+  end
+
+  it 'should eval 3-1 to 2' do
+    expect(Calc.eval('3-1')).to eq 2
   end
 end
