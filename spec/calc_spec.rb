@@ -77,4 +77,18 @@ describe 'calc' do
       expect(Calc.eval('5-2+1-8')).to eq 0
     end
   end
+
+  context 'multiple different calcs, different priority' do
+    it 'should eval 1+3*2 to 7' do
+      expect(Calc.eval('1+3*2')).to eq 7
+    end
+
+    it 'should eval 3*2-4/2 to 2' do
+      expect(Calc.eval('3*2-4/2')).to eq 2
+    end
+
+    it 'should eval 8-6-8/3 to 0' do
+      expect(Calc.eval('8-6-8/3')).to eq 0
+    end
+  end
 end
